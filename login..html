@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(https://image.shutterstock.com/image-photo/old-brick-black-color-wall-260nw-1605128917.jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+.form2{ 
+    height: 250px;
+    width: 350px;
+    text-align: center;
+    padding: 100px;
+    
+   
+} 
+.form{
+    background-color: rgb(255, 255, 255);
+    filter: opacity(80%);
+}
+#login-btn,#reset-btn{
+    height: 35px;
+    width: 80px;
+    margin: 15px; 
+    
+}
+    </style>
+</head>
+<body>
+    <main>
+        <div class="main">
+          <div class="form">
+            <div class="form2">
+                <label for="userName">User Name :</label>
+                <input id="user-Name" name="userName" type="text"> <br> <br>
+                <label for="password">Password : &nbsp;</label>
+                <input id="password" type="password" name="password" id="password"> <br><br><br><br>
+                <button id="login-btn">
+                    Login
+                </button> 
+            </div>           
+        </div>
+        </div>
+    </main>
+
+<script>
+    let user = document.getElementById("user-Name");
+let pass = document.getElementById("password");
+let loginBtn = document.getElementById("login-btn");
+loginBtn.addEventListener('click',function(){
+    if(user.value == ''){
+        alert("Username is required");
+    }
+    else if(pass.value == ''){
+        alert("Password is required");
+    }
+    else{
+        if(user.value == 'EmadAdil' && pass.value == 'adil'){
+            window.location.href = 'index.html';
+        }
+        else{
+            alert(" Your pass/username is incorrect")
+        }
+    }
+}) 
+
+</script>
+</body>
+</html>

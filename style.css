@@ -1,0 +1,79 @@
+.money{
+    color: blueviolet;
+    font-size: 4rem; 
+}
+header{
+    text-align: center;
+}
+header > h1{
+    font-size: 55px;
+} 
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%; 
+    margin: 0 auto;
+}
+.main-section{
+    width: 28%;
+    height: 150px; 
+    padding: 15px;
+    color: white;
+    border-radius: 7px;
+}
+.main-section > span{
+    font-size: 2.5rem;
+}
+.diposit{
+    background-color: #93C5FD;
+}
+.withdraw{
+    background-color: #86EFAC;
+} 
+.balance{
+    background-color: #FDE047;
+}
+.main2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%; 
+    margin: 0 auto;
+} 
+.deposit-section{
+    background-color: #FEE2E2;
+    height: 180px;
+    width: 46%;
+    padding: 15px;
+    margin-right: 5px;
+    border-radius: 15px;
+} 
+.withdraw-section{
+    background-color: #F3E8FF;
+    height: 180px;
+    width: 46%;
+    padding: 15px;
+    margin-left: 5px;
+    border-radius: 15px;
+}
+#depositAddBtn,#withdraw-btn{
+    background-color: #CA8A04;
+    height: 40px;
+    width: 120px;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+#depositInput,#withdraw-input{
+    width: 380px;
+    height: 22px;
+    font-size: 16px;
+    
+}
+footer{
+    text-align: center;
+}
+
