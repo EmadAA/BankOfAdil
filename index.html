@@ -4,73 +4,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bank of Adil</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Login Page</title>
+    <style>
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(https://image.shutterstock.com/image-photo/old-brick-black-color-wall-260nw-1605128917.jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+.form2{ 
+    height: 250px;
+    width: 350px;
+    text-align: center;
+    padding: 100px;
+    
+   
+} 
+.form{
+    background-color: rgb(255, 255, 255);
+    filter: opacity(80%);
+}
+#login-btn,#reset-btn{
+    height: 35px;
+    width: 80px;
+    margin: 15px; 
+    
+}
+    </style>
 </head>
 <body>
-    <header> 
-        <h1 >
-            Let's get some <span class="money">Mooooney</span>!!
-        </h1>
-    </header>
     <main>
         <div class="main">
-            <div class="diposit main-section">
-                <h1>
-                    Deposit
-                </h1>
-                <span>$</span>
-                <span id="total-deposit">00</span>
-            </div>
-            <div class="withdraw main-section">
-                <h1>
-                    Withdraw
-                </h1>
-                <span>$</span>
-                <span id="total-withdraw">00</span>
-            </div>
-            <div class="balance main-section">
-                <h1>
-                    Balance 
-                </h1>
-                <span>$</span>
-                <span id="total-balance">1200</span>
-            </div>
-            
-        </div> <br><br>
-        <div class="main2">
-            <div class="deposit-section">
-                <h1>
-                    Please Deposit Your Balance
-                </h1> 
-                <input id="depositInput" type="text" placeholder="$ amount you want to deposit"> <br><br>
-                <button id="depositAddBtn">
-                    Deposit
-                </button>
-            </div>
-            <div class="withdraw-section">
-                <h1>
-                    Please Withdraw Your Balance
-                </h1> 
-                <input id="withdraw-input" type="text" placeholder="$ amount you want to withdraw"> <br><br>
-                <button id="withdraw-btn">
-                    Withdraw
-                </button>
-            </div>
+          <div class="form">
+            <div class="form2">
+                <label for="userName">User Name :</label>
+                <input id="user-Name" name="userName" type="text"> <br> <br>
+                <label for="password">Password : &nbsp;</label>
+                <input id="password" type="password" name="password" id="password"> <br><br><br><br>
+                <button id="login-btn">
+                    Login
+                </button> 
+            </div>           
         </div>
-        <footer >
-            <h1>
-                Click Here to get your Interest rate :
-            </h1>
-            <button id="interest">
-                Interest
-            </button>
-            <h3>
-                &copy; Emad Uddin Adil
-            </h3>
-        </footer>
+        </div>
     </main>
 
-<script src="script.js"></script>
+<script>
+    let user = document.getElementById("user-Name");
+let pass = document.getElementById("password");
+let loginBtn = document.getElementById("login-btn");
+loginBtn.addEventListener('click',function(){
+    if(user.value == ''){
+        alert("Username is required");
+    }
+    else if(pass.value == ''){
+        alert("Password is required");
+    }
+    else{
+        if(user.value == 'EmadAdil' && pass.value == 'adil'){
+            window.location.href = 'index.html';
+        }
+        else{
+            alert(" Your pass/username is incorrect")
+        }
+    }
+}) 
+
+</script>
 </body>
-</html>
+</html> 
